@@ -1,0 +1,8 @@
+const route = require("express").Router()
+const controller = require("../controllers/studentController")
+
+route.get("/", controller.all)
+route.get("/:id", controller.get)
+
+
+module.exports = route

@@ -1,0 +1,30 @@
+var data = [
+    {
+        Id : 1,
+        Name : "Jasper Duke",
+        Age : 24
+    },
+    {
+        Id : 2,
+        Name : "Nolan Ash",
+        Age : 23
+    },
+    {
+        Id : 3,
+        Name : "Thae Thae",
+        Age : 25
+    }
+]
+
+
+const all = async (req,res) =>{
+    res.json(data)
+}
+
+const get = async (req,res) =>{
+    var id = req.params.id
+    res.json(data.find(obj => obj.Id == id))
+}
+
+
+module.exports = {all, get}
